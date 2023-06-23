@@ -1,0 +1,19 @@
+.form-control.ng-touched.ng-invalid{
+    border:2px solid red ;
+}
+.form-control.ng-touched.ng-valid{
+    border:2px solid green;
+}
+h1 {
+    text-align: center;
+    font-style: oblique;
+}
+h2 {
+    text-align: center;
+}
+button {
+    position: center;
+}
+#card-details{
+    font-size: 25px;
+}

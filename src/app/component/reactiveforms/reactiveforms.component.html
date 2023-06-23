@@ -1,0 +1,46 @@
+<body>
+    <h1>------:::- Welcome -:::--------</h1>
+    <h1>LOg-In</h1>
+    <form [formGroup]="form">
+        <div class="form-group">
+            <label for="username" style="font-size:30px;">Name</label><input type="text" class="form-control" formControlName="username" />
+            <div class="alert alert-info" *ngIf="username?.touched && username?.errors?.['required']">Username is
+                required</div>
+            <div class="alert alert-warning" *ngIf="username?.errors?.['nospace']">Space is not allowed in Username
+            </div>
+        </div>
+        <div class="form-group" >
+            <label for="password" style="font-size:30px;">Password</label><input type="password" class="form-control"
+                formControlName="password" />
+
+            <div class="alert alert-info" *ngIf="password?.touched && password?.errors?.['required']">Password can not
+                be blank</div>
+
+            <div class="alert alert-info" *ngIf=" password?.touched && password?.errors?.['valid']">Password must
+                contain special character</div>
+        </div>
+        <div class="form-group">
+            <label for="phone" style="font-size:30px;">Phone</label><input type="phone" class="form-control" formControlName="phone" />
+            <div class="alert alert-info" *ngIf="phone?.touched && phone?.errors?.['required']">Phone can not be blank
+            </div>
+            <div class="alert alert-warning" *ngIf="  phone?.touched && phone?.errors?.['check']">phone number invalid
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="topics" style="font-size:30px;">Address</label>
+            <input type="text" class="form-control" #t (keyup.enter)="addtopics(t)">
+        </div>
+        <div class="form-group">
+            <ul class="list-group">
+                <li class="list-group-items" *ngFor="let x of topics.controls">{{x.value}}</li>
+            </ul>
+        </div>
+        <label id="card-details">Cards Details</label><br>
+        <input style="width: 100%;height:30px;" type="text" placeholder="Enter the Card Number">
+        <br>
+       <label id="card-details">CVV</label><br>
+       <input type="text" placeholder="Enter the CVV">
+        
+    </form><br>
+    <button type="submit" id='button' class="btn btn-warning" (click)="alert2()">Submit</button>
+</body>

@@ -1,0 +1,46 @@
+<br>
+<div class="container" *ngIf="mysearch.length ==0 && bl1==-1">
+  <div class="row">
+    <div class="col" *ngFor="let x of mydishes; let i=index">
+      <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 22rem;">
+        <img src="{{x.img}}" class="card-img-top" style="width: 16rem; max-height: 10rem;">
+        <div class="card-body">
+
+
+          <p class="card-title-bold"><strong>{{x.dishes}} <br><button class="btn"
+                style="background-color:rgb(37,185,222);border-radius:12px;width:5.4rem"> Rs
+                {{x.price}}</button></strong></p>
+
+        </div>
+        <td><button class="btn btn-warning" (click)="addtofav(i);">Add to favourite</button>
+          <button class="btn btn-success" (click)="addtobucket(i);">Add to cart</button>
+        </td>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" *ngIf="mysearch.length!=0">
+  <div class="row">
+    <div class="col" *ngFor="let x of mysearch; let i=index">
+      <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 22rem;">
+        <img src="{{x.img}}" class="card-img-top" style="width: 16rem; max-height: 10rem;">
+        <div class="card-body">
+
+
+          <p class="card-title-bold"><strong>{{x.dishes}} <br><button class="btn"
+                style="background-color:rgb(37,185,222);border-radius:12px;width:5.4rem">Rs{{x.price}}</button></strong>
+          </p>
+
+        </div>
+        <td><button class="btn btn-warning" (click)="addtofav(i);">Add to favourite</button>
+          <button class="btn btn-success" (click)="addtobucket(i);">Add to cart</button>
+        </td>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div *ngIf="bl1==2" style="margin-bottom:130px;">
+  <h1>search item not found</h1>
+</div>

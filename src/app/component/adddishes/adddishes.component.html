@@ -1,0 +1,14 @@
+<body >
+<div>
+    <label>Image </label>
+    <input type="text" class="form-control" placeholder="enter the image link" [(ngModel)]="imag">
+    <label>Dishes </label>
+    <input type="text" appMydir class="form-control" placeholder="enter the dish" [(ngModel)]="h">
+    <label>Price</label>
+    <input type="text" appMydir class="form-control" placeholder="Enter the Price of item" [(ngModel)]="price">
+    <label>Type</label>
+    <input type="text" appMydir class="form-control" placeholder="Enter the category(veg or nonveg)" [(ngModel)]="type">
+</div><br>
+<button type="button" class="btn btn-danger" position="center" (click)="addItem();">Add</button>
+
+</body>

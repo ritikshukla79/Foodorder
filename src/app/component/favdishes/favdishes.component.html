@@ -1,0 +1,15 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col" *ngFor="let x of f; let i=index">
+      <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;" style="width: 18rem;">
+        <img src="{{x.img}}" class="card-img-top" style="width: auto; max-height:10rem">
+        <div class="card-body">
+          <b class="card-title-bold">{{x.dishes}}</b>
+        </div>
+        <td><button class="btn btn-danger" (click)="remove_from_fav(i);" style="border-radius:10px;">Remove</button>
+        </td>
+      </div>
+    </div>
+  </div>
+</div>

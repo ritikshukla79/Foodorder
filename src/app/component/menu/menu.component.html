@@ -1,0 +1,89 @@
+<nav style="font-size:20px;padding-left:700px;background-color:rgba(209, 224, 226, 0.856);">
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <button class="nav-link active" id="nav-veg-tab" data-bs-toggle="tab" data-bs-target="#nav-veg" type="button"
+      role="tab" aria-controls="nav-veg" aria-selected="true">Veg</button>
+    <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+      role="tab" aria-controls="nav-profile" aria-selected="false">Non-Veg</button>
+    <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button"
+      role="tab" aria-controls="nav-contact" aria-selected="false">Drinks</button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-veg" role="tabpanel" aria-labelledby="nav-veg-tab"><br>
+    <div class="container">
+      <div class="row">
+        <div class="col" *ngFor="let x of vegdish; let i=index">
+          <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 22rem;">
+            <img src="{{x.img}}" class="card-img-top" style="width: 16rem; max-height: 10rem;">
+            <div class="card-body">
+
+
+              <p class="card-title-bold"><strong>{{x.dishes}} <br><button class="btn"
+                    style="background-color:rgb(37,185,222);border-radius:12px;width:5.4rem">
+                    Rs {{x.price}}</button></strong></p>
+
+            </div>
+            <td>
+              <button class="btn" (click)="addtocart(x,i);">Add to cart</button>
+            </td>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col" *ngFor="let x of nonvegdish; let i=index">
+          <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 22rem;">
+            <img src="{{x.img}}" class="card-img-top" style="width: 16rem; max-height: 10rem;">
+            <div class="card-body">
+
+
+              <p class="card-title-bold"><strong>{{x.dishes}} <br><button class="btn"
+                    style="background-color:rgb(37,185,222);border-radius:12px;width:5.4rem">
+                    Rs {{x.price}}</button></strong></p>
+
+            </div>
+            <td>
+
+              <button class="btn btn-info" (click)="addtocart(x,i);">Add to cart</button>
+            </td>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="tab-pane fade drink" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col" *ngFor="let x of drinks; let i=index">
+          <div class="card" class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem; height: 22rem;">
+            <img src="{{x.img}}" class="card-img-top" style="width: 16rem; max-height: 10rem;">
+            <div class="card-body">
+
+
+              <p class="card-title-bold"><strong>{{x.dishes}} <br><button class="btn"
+                    style="background-color:rgb(37,185,222);border-radius:12px;width:5.4rem">
+                    Rs {{x.price}}</button></strong></p>
+
+            </div>
+            <td>
+
+              <button class="btn btn-info" (click)="addtocart(x,i);">Add to cart</button>
+            </td>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

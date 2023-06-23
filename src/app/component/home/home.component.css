@@ -1,0 +1,50 @@
+a {color:black;
+    }
+nav {
+    height:"400px";
+    text-align: center;
+}
+h1 {
+    margin-bottom: "75px";
+    font-size:100px;
+    text-decoration-line: underline;
+    font-style: oblique;
+}
+
+.heading{
+    margin-bottom: 65px;
+    
+}
+
+.container {
+    overflow-y: auto;
+    height: 460px;
+  }
+  .table thead th {
+    position: sticky;
+    top: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th,
+  td {
+    padding: 8px 16px;
+    border: 1px solid #ccc;
+  }
+  .modal-fade {
+    width: 100%;
+    
+  }
+  .searchbaar{
+    margin-bottom: 90px;
+    width:1200px;
+    height:3px;
+    margin-left:150px;
+    
+  }
+  .form-control{
+    background:whitesmoke;
+  }
+  
